@@ -1,0 +1,10 @@
+version: '3.4'
+
+services:
+  messageconsumerdaemon:
+    image: ${DOCKER_REGISTRY-}messageconsumerdaemon
+    container_name: rabbitmq.testmessageconsumer.daemon
+    build:
+      context: .
+      dockerfile: MessageConsumerDaemon/Dockerfile
+      
